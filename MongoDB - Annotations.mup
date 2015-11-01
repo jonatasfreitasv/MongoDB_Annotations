@@ -533,6 +533,51 @@
           "background": "#00ccff"
         }
       }
+    },
+    "-3": {
+      "title": "Aggregations",
+      "id": 99,
+      "ideas": {
+        "2": {
+          "title": "db.collection.aggregate(\n[{\"$group\": {\"_id\": \"referenced_field\"}}])",
+          "id": 103,
+          "ideas": {
+            "1": {
+              "title": "for return referenced id`s in collection",
+              "id": 100,
+              "ideas": {},
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        },
+        "3": {
+          "title": "db.collection.aggregate(\n[\n{\"$group\": {\n\"_id\":\"referenced_field\", \"total\": {\"$sum\": 1}\n}}])",
+          "id": 104,
+          "ideas": {
+            "1": {
+              "title": "for return a total documents with a referenced collection",
+              "id": 105
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#00ccff"
+        }
+      }
     }
   },
   "links": [],
