@@ -607,8 +607,18 @@
               }
             },
             "4": {
-              "title": "db.collection.aggregate(\n[\n{\"$match\": {}},\n{\"$group\": {}},\n{\"$sort\": {}},\n{\"$limit\": {}}\n]\n)",
+              "title": "db.collection.aggregate(\n[\n{\"$match\": {}},\n{\"$project\": {}}\n{\"$group\": {}},\n{\"$sort\": {}},\n{\"$limit\": 3}\n]\n)",
               "id": 120
+            },
+            "3.5": {
+              "title": "$project",
+              "id": 121,
+              "ideas": {
+                "1": {
+                  "title": "to show only needed fields",
+                  "id": 122
+                }
+              }
             }
           },
           "attr": {
