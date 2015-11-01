@@ -539,7 +539,7 @@
       "id": 99,
       "ideas": {
         "2": {
-          "title": "db.collection.aggregate(\n[{\"$group\": {\"_id\": \"referenced_field\"}}])",
+          "title": "db.collection.aggregate(\n[{\"$group\": {\"_id\": \"$referenced_field\"}}])",
           "id": 103,
           "ideas": {
             "1": {
@@ -558,12 +558,57 @@
           }
         },
         "3": {
-          "title": "db.collection.aggregate(\n[{\"$group\": {\n\"_id\":\"referenced_field\", \"total\": {\"$sum\": 1}\n}}])",
+          "title": "db.collection.aggregate(\n[{\"$group\": {\n\"_id\":\"$referenced_field\", \"total\": {\"$sum\": 1}\n}}])",
           "id": 104,
           "ideas": {
             "1": {
               "title": "for return a total documents with a referenced collection",
               "id": 105
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        },
+        "4": {
+          "title": "Operators",
+          "id": 106,
+          "ideas": {
+            "1": {
+              "title": "$match",
+              "id": 107,
+              "ideas": {
+                "1": {
+                  "title": "for filter results",
+                  "id": 109
+                }
+              }
+            },
+            "2": {
+              "title": "$sort",
+              "id": 113,
+              "ideas": {
+                "1": {
+                  "title": "for sort results",
+                  "id": 114
+                }
+              }
+            },
+            "3": {
+              "title": "$limit",
+              "id": 117,
+              "ideas": {
+                "1": {
+                  "title": "for limit results",
+                  "id": 118
+                }
+              }
+            },
+            "4": {
+              "title": "db.collection.aggregate(\n[\n{\"$match\": {}},\n{\"$group\": {}},\n{\"$sort\": {}},\n{\"$limit\": {}}\n]\n)",
+              "id": 120
             }
           },
           "attr": {
