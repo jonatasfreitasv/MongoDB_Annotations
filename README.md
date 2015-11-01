@@ -5,4 +5,6 @@ This repository contains notes and links on studies and issues related to MongoD
 ##### For view mindmap https://goo.gl/n447YP
 ##### For colaboration, fork this project and open mindmap on https://www.mindmup.com
 ##### Free MongoDB server on the cloud https://mongolab.com
-##### MongoDB Course https://www.codeschool.com
+##### MongoDB Courses
++  https://www.codeschool.com
++  https://university.mongodb.com/
