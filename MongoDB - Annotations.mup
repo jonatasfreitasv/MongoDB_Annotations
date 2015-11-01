@@ -8,7 +8,7 @@
       "id": 55,
       "ideas": {
         "1": {
-          "title": "db.collection.remove(\n{\"field\": \"value_to_match\"}\n)",
+          "title": "db.collection.remove(\n{\"field\":\"value_to_match\"})",
           "id": 4,
           "ideas": {
             "1": {
@@ -17,19 +17,22 @@
             }
           },
           "attr": {
-            "style": {}
+            "style": {
+              "background": "#ccffff"
+            }
           }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#00ccff"
         }
       }
     },
     "13": {
-      "title": "Find",
+      "title": "## Find ##\n- Basic Command-  db.collection.find()",
       "id": 56,
       "ideas": {
-        "1": {
-          "title": "db.collection.find({\"field\": \"value\"})",
-          "id": 57
-        },
         "2": {
           "title": "Operators",
           "id": 58,
@@ -101,6 +104,11 @@
                 }
               }
             }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
           }
         },
         "3": {
@@ -110,6 +118,11 @@
             "1": {
               "title": "For return only set fields",
               "id": 76
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
             }
           }
         },
@@ -121,6 +134,11 @@
               "title": "by default, sheel return only 20 first documents, for view more, type it in console to view others 20 documents in collection",
               "id": 80
             }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
           }
         },
         "5": {
@@ -130,6 +148,11 @@
             "1": {
               "title": "for show total documents in collection",
               "id": 82
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
             }
           }
         },
@@ -160,6 +183,11 @@
                 }
               }
             }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
           }
         },
         "8": {
@@ -172,243 +200,311 @@
             }
           },
           "attr": {
-            "style": {}
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#00ccff"
+        }
+      }
+    },
+    "14": {
+      "title": "Other Commands",
+      "id": 92,
+      "attr": {
+        "style": {
+          "background": "#00ccff"
+        }
+      },
+      "ideas": {
+        "1": {
+          "title": "db.stats()",
+          "id": 93,
+          "ideas": {
+            "1": {
+              "title": "show database status",
+              "id": 94
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        },
+        "2": {
+          "title": "db.getCollectionNames()",
+          "id": 96,
+          "ideas": {
+            "1": {
+              "title": "show all collections in database",
+              "id": 97
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
           }
         }
       }
     },
     "-1": {
-      "title": "Update",
+      "title": "## Update ##\n - Basic Command -\ndb.collection.update()\n",
       "id": 53,
       "ideas": {
-        "1": {
-          "title": "db.collection.update",
-          "id": 5,
+        "2": {
+          "title": "Array",
+          "id": 38,
           "ideas": {
-            "2": {
-              "title": "{\"field\": \"match\"},\n{\"$set\": {\"field\": \"update value\"}}",
-              "id": 11,
+            "1": {
+              "title": "{\"array_field\": \"value\"},\n{\"$set\": {\n\"array_field.$\":\"new_value\"}},\n{\"multi\": true}",
+              "id": 24,
               "ideas": {
                 "1": {
-                  "title": "simple update operation",
-                  "id": 28
+                  "title": "to update array item in multi documents",
+                  "id": 25
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "{\"$set\": \n{\"array.1\": \"new_value\"}",
+              "id": 22,
+              "ideas": {
+                "1": {
+                  "title": "to update array item",
+                  "id": 23
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "{\"$pop\": \n{\"array_field\": -1}}",
+              "id": 41,
+              "ideas": {
+                "1": {
+                  "title": "to remove a first item in array",
+                  "id": 42
+                }
+              }
+            },
+            "4": {
+              "title": "{\"$pop\": \n{\"array_field\": 1}}",
+              "ideas": {
+                "1": {
+                  "title": "to remove a last item in array",
+                  "id": 44
+                }
+              },
+              "id": 43,
+              "attr": {
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "{\"$push\": \n{\"array_field\": \"new_item\"}}",
+              "id": 46,
+              "ideas": {
+                "1": {
+                  "title": "to add a new item in end of array",
+                  "id": 47
                 }
               }
             },
             "6": {
-              "title": "\"$rename\": {\"old_field_name\": \"new_field_name\"}",
-              "id": 19,
+              "title": "{\"$addToSet\": \n{\"array_field\": \"new_item\"}}",
+              "id": 48,
               "ideas": {
                 "1": {
-                  "title": "for rename a field",
-                  "id": 20
-                }
-              },
-              "attr": {
-                "style": {}
-              }
-            },
-            "13": {
-              "title": "Operators",
-              "id": 37,
-              "ideas": {
-                "1": {
-                  "title": "{\"field\": \"match\"},\n{\"$min\": {\"field\": 1}}",
-                  "attr": {
-                    "style": {}
-                  },
-                  "ideas": {
-                    "1": {
-                      "title": "update if new value is < old value",
-                      "id": 36
-                    }
-                  },
-                  "id": 35
-                },
-                "2": {
-                  "title": "{\"field\": \"match\"},\n{\"$max\": {\"field\": 1}}",
-                  "ideas": {
-                    "1": {
-                      "title": "update if new value is > old value",
-                      "id": 34
-                    }
-                  },
-                  "id": 33,
-                  "attr": {
-                    "style": {}
-                  }
-                },
-                "3": {
-                  "title": "\"$unset\": {\"field\": \"\"}",
-                  "id": 16,
-                  "ideas": {
-                    "1": {
-                      "title": "for remove field in document",
-                      "id": 18
-                    }
-                  },
-                  "attr": {
-                    "style": {}
-                  }
-                },
-                "4": {
-                  "title": "\"$inc\": {\"count\": 1}",
-                  "id": 14,
-                  "ideas": {
-                    "1": {
-                      "title": "for increment",
-                      "id": 15
-                    }
-                  },
-                  "attr": {
-                    "style": {}
-                  }
+                  "title": "add a new item if it not exist",
+                  "id": 49
                 }
               }
             },
-            "14": {
-              "title": "Array",
-              "id": 38,
+            "7": {
+              "title": "{\"$pull\":\n{\"array_field\": \"item\"}}",
+              "id": 51,
               "ideas": {
                 "1": {
-                  "title": "{\"array_field\": \"value\"},\n{\"$set\": {\n\"array_field.$\":\"new_value\"}},\n{\"multi\": true}",
-                  "id": 24,
-                  "ideas": {
-                    "1": {
-                      "title": "to update array item in multi documents",
-                      "id": 25
-                    }
-                  },
-                  "attr": {
-                    "style": {}
-                  }
-                },
-                "2": {
-                  "title": "{\"$set\": \n{\"array.1\": \"new_value\"}",
-                  "id": 22,
-                  "ideas": {
-                    "1": {
-                      "title": "to update array item",
-                      "id": 23
-                    }
-                  },
-                  "attr": {
-                    "style": {}
-                  }
-                },
-                "3": {
-                  "title": "{\"$pop\": \n{\"array_field\": -1}}",
-                  "id": 41,
-                  "ideas": {
-                    "1": {
-                      "title": "to remove a first item in array",
-                      "id": 42
-                    }
-                  }
-                },
-                "4": {
-                  "title": "{\"$pop\": \n{\"array_field\": 1}}",
-                  "ideas": {
-                    "1": {
-                      "title": "to remove a last item in array",
-                      "id": 44
-                    }
-                  },
-                  "id": 43,
-                  "attr": {
-                    "style": {}
-                  }
-                },
-                "5": {
-                  "title": "{\"$push\": \n{\"array_field\": \"new_item\"}}",
-                  "id": 46,
-                  "ideas": {
-                    "1": {
-                      "title": "to add a new item in end of array",
-                      "id": 47
-                    }
-                  }
-                },
-                "6": {
-                  "title": "{\"$addToSet\": \n{\"array_field\": \"new_item\"}}",
-                  "id": 48,
-                  "ideas": {
-                    "1": {
-                      "title": "add a new item if it not exist",
-                      "id": 49
-                    }
-                  }
-                },
-                "7": {
-                  "title": "{\"$pull\":\n{\"array_field\": \"item\"}}",
-                  "id": 51,
-                  "ideas": {
-                    "1": {
-                      "title": "to remove a item in an array",
-                      "id": 52
-                    }
-                  }
-                }
-              }
-            },
-            "15": {
-              "title": "Collections",
-              "id": 40,
-              "ideas": {
-                "1": {
-                  "title": "{\"$set\": {\"collection.item\": \"new_value\"}}",
-                  "id": 26,
-                  "ideas": {
-                    "1": {
-                      "title": "to update value in collection field",
-                      "id": 27
-                    }
-                  },
-                  "attr": {
-                    "style": {}
-                  }
-                }
-              }
-            },
-            "10.5": {
-              "title": "Options",
-              "id": 39,
-              "attr": {
-                "style": {}
-              },
-              "ideas": {
-                "1": {
-                  "title": "\"upsert\": true",
-                  "id": 12,
-                  "ideas": {
-                    "1": {
-                      "title": "for insert if no matches",
-                      "id": 13
-                    }
-                  },
-                  "attr": {
-                    "style": {}
-                  }
-                },
-                "2": {
-                  "title": "\"multi\": true",
-                  "id": 7,
-                  "ideas": {
-                    "1": {
-                      "title": "for update all matches",
-                      "id": 8
-                    }
-                  },
-                  "attr": {
-                    "style": {}
-                  }
+                  "title": "to remove a item in an array",
+                  "id": 52
                 }
               }
             }
           },
           "attr": {
-            "style": {}
+            "style": {
+              "background": "#ccffff"
+            }
           }
+        },
+        "3": {
+          "title": "Collections",
+          "id": 40,
+          "ideas": {
+            "1": {
+              "title": "{\"$set\": {\"collection.item\": \"new_value\"}}",
+              "id": 26,
+              "ideas": {
+                "1": {
+                  "title": "to update value in collection field",
+                  "id": 27
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        },
+        "4": {
+          "title": "Operators",
+          "id": 37,
+          "ideas": {
+            "1": {
+              "title": "{\"field\": \"match\"},\n{\"$min\": {\"field\": 1}}",
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "update if new value is < old value",
+                  "id": 36
+                }
+              },
+              "id": 35
+            },
+            "2": {
+              "title": "{\"field\": \"match\"},\n{\"$max\": {\"field\": 1}}",
+              "ideas": {
+                "1": {
+                  "title": "update if new value is > old value",
+                  "id": 34
+                }
+              },
+              "id": 33,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "\"$unset\": {\"field\": \"\"}",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "for remove field in document",
+                  "id": 18
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "\"$inc\": {\"count\": 1}",
+              "id": 14,
+              "ideas": {
+                "1": {
+                  "title": "for increment",
+                  "id": 15
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        },
+        "5": {
+          "title": "Options",
+          "id": 39,
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          },
+          "ideas": {
+            "1": {
+              "title": "\"upsert\": true",
+              "id": 12,
+              "ideas": {
+                "1": {
+                  "title": "for insert if no matches",
+                  "id": 13
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "\"multi\": true",
+              "id": 7,
+              "ideas": {
+                "1": {
+                  "title": "for update all matches",
+                  "id": 8
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "6": {
+          "title": "\"$rename\": {\"old_field_name\": \"new_field_name\"}",
+          "id": 19,
+          "ideas": {
+            "1": {
+              "title": "for rename a field",
+              "id": 20
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        },
+        "7": {
+          "title": "{\"field\": \"match\"},\n{\"$set\": {\"field\": \"update value\"}}",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "simple update operation",
+              "id": 28
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#ccffff"
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#00ccff"
         }
       }
     },
@@ -426,11 +522,23 @@
             }
           },
           "attr": {
-            "style": {}
+            "style": {
+              "background": "#ccffff"
+            }
           }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#00ccff"
         }
       }
     }
   },
-  "links": []
+  "links": [],
+  "attr": {
+    "style": {
+      "background": "#333399"
+    }
+  }
 }
