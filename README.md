@@ -8,4 +8,4 @@ This repository contains notes and links on studies and issues related to MongoD
 ##### MongoDB UI http://robomongo.org
 ##### MongoDB Courses and Certification
 +  https://www.codeschool.com
-+  https://university.mongodb.com/
++  https://university.mongodb.com
