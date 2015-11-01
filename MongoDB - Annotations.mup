@@ -558,7 +558,7 @@
           }
         },
         "3": {
-          "title": "db.collection.aggregate(\n[\n{\"$group\": {\n\"_id\":\"referenced_field\", \"total\": {\"$sum\": 1}\n}}])",
+          "title": "db.collection.aggregate(\n[{\"$group\": {\n\"_id\":\"referenced_field\", \"total\": {\"$sum\": 1}\n}}])",
           "id": 104,
           "ideas": {
             "1": {
